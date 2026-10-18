@@ -15,8 +15,8 @@ class mainScene {
     this.item = this.physics.add.sprite(50, 50, 'item');
 
     // Match the hitbox to the visible player, the PNG has transparent padding.
-    this.player.body.setSize(16, 41, false);
-    this.player.body.setOffset(56, 23);
+    this.player.body.setSize(16, 41, false); // hitbox size inside the png.
+    this.player.body.setOffset(56, 23); // hitbox pos inside the png.
 
     // Keep the player's hitbox inside the game frame.
     this.player.setCollideWorldBounds(true);
@@ -69,6 +69,8 @@ new Phaser.Game({
   height: 500, // Height of the game in pixels
   backgroundColor: '#3498db', // The background color (blue)
   scene: mainScene, // The name of the scene we created
-  physics: { default: 'arcade' }, // The physics engine to use
+  physics: { default: 'arcade',
+    // arcade: { debug: true} // user for debugging
+   }, // The physics engine to use
   parent: 'game', // Create the game inside the <div id="game"> 
 })
