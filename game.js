@@ -20,8 +20,8 @@ class mainScene {
     this.item.setScale(1.5);
 
     // Match the hitbox to the visible player, the PNG has transparent padding.
-    this.player.body.setSize(24, 54, false); // hitbox size inside the png.
-    this.player.body.setOffset(56, 23); // hitbox pos inside the png.
+    this.player.body.setSize(24, 50, false); // hitbox size inside the png.
+    this.player.body.setOffset(52, 18); // hitbox pos inside the png.
 
     // Keep the player's hitbox inside the game frame.
     this.player.setCollideWorldBounds(true);
